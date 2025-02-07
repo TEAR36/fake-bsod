@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Crash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
+            background: url('https://fakebsod.com/your-bsod-image.png') no-repeat center center fixed;
+            background-size: cover;
+            cursor: none; /* Cache la souris pour un effet réaliste */
+        }
+        /* Empêche toute interaction */
+        body, html {
+            width: 100%;
+            height: 100%;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Empêche d'utiliser la touche F12 (console dev)
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "F12" || event.key === "F11" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+            }
+        });
+
+        // Met en plein écran automatique
+        document.documentElement.requestFullscreen().catch(err => {
+            console.log("Impossible de passer en plein écran", err);
+        });
+    </script>
+</body>
+</html>
