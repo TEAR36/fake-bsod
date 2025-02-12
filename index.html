@@ -53,6 +53,40 @@
         .button:hover {
             background: #666;
         }
+        .news-section {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+        .news-section h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #FFD700; /* Or */
+        }
+        .news-section p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: white;
+        }
+        .discord-button {
+            background: #7289DA;
+            border: none;
+            padding: 15px;
+            width: 250px;
+            margin: 15px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .discord-button:hover {
+            background: #5b6eae;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +98,15 @@
         <a class="button" onclick="sendNotification(); launchTLauncher()">Lancer TLauncher</a>
         <a class="button" onclick="sendNotification(); copyIP()">Copier l'IP du serveur</a>
     </div>
+
+    <!-- Section des nouveautés du serveur -->
+    <div class="news-section">
+        <h2>Nouveautés du serveur</h2>
+        <p id="news-content">Nous avons récemment ajouté une nouvelle carte sur le serveur, avec des structures épiques à explorer ! Venez tester tout ça en rejoignant notre serveur dès maintenant. Plus de nouveautés arrivent chaque semaine !</p>
+    </div>
+
+    <!-- Bouton Discord -->
+    <a href="https://discord.gg/w4zeVDZqHV" class="discord-button" target="_blank">Rejoindre le Discord</a>
 
     <script>
         const serverIP = "Arthanie.aternos.me";
